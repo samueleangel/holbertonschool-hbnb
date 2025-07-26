@@ -5,24 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Places</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
     <header>
+        <img class="logo" src="images/logo.png" alt="HBnB Logo">
         <nav>
-            <a href="login.html" id="login-link">Login</a>
+            <a href="login.html" id="login-link" class="login-button">Login</a>
         </nav>
     </header>
+
     <main>
         <section id="filter">
             <label for="price-filter">Max Price:</label>
             <select id="price-filter">
-                <!-- Options will be populated dynamically -->
+                <option value="">All</option>
+                <!-- Options will be populated by JavaScript -->
             </select>
         </section>
+
         <section id="places-list">
-            <!-- List of places will be populated dynamically -->
+            <!-- Default places - will be replaced by dynamic content when API is available -->
+            <div class="place-card" data-price="120">
+                <h3>Modern Downtown House</h3>
+                <p class="description">Beautiful modern house in the city center</p>
+                <p class="location">Madrid, Spain</p>
+                <p class="price">$120 per night</p>
+                <button class="details-button" type="button" onclick="window.location.href='place.html?id=1'">
+                    View Details
+                </button>
+            </div>
+            <div class="place-card" data-price="85">
+                <h3>Ocean View Apartment</h3>
+                <p class="description">Stunning apartment with ocean views</p>
+                <p class="location">Valencia, Spain</p>
+                <p class="price">$85 per night</p>
+                <button class="details-button" type="button" onclick="window.location.href='place.html?id=2'">
+                    View Details
+                </button>
+            </div>
+            <div class="place-card" data-price="95">
+                <h3>Mountain Cabin</h3>
+                <p class="description">Cozy cabin in the mountains</p>
+                <p class="location">Asturias, Spain</p>
+                <p class="price">$95 per night</p>
+                <button class="details-button" type="button" onclick="window.location.href='place.html?id=3'">
+                    View Details
+                </button>
+            </div>
+            <div class="place-card" data-price="150">
+                <h3>Urban Modern Loft</h3>
+                <p class="description">Stylish loft in the urban area</p>
+                <p class="location">Barcelona, Spain</p>
+                <p class="price">$150 per night</p>
+                <button class="details-button" type="button" onclick="window.location.href='place.html?id=4'">
+                    View Details
+                </button>
+            </div>
+            <div class="place-card" data-price="75">
+                <h3>Country House with Garden</h3>
+                <p class="description">Peaceful house with beautiful garden</p>
+                <p class="location">Sevilla, Spain</p>
+                <p class="price">$75 per night</p>
+                <button class="details-button" type="button" onclick="window.location.href='place.html?id=5'">
+                    View Details
+                </button>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 All rights reserved</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>

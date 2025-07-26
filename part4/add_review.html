@@ -5,21 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Review</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="HBnB Logo">
+        <nav>
+            <a href="index.html" class="login-button">Back to Home</a>
+        </nav>
+    </header>
+
     <main>
-        <!-- Add something to idfentify the place you're reviewing -->
-        <form id="review-form">
+        <div id="place-info">
+            <!-- Place information will be populated dynamically -->
+        </div>
+        
+        <form id="review-form" class="add-review form">
             <h2>Add a Review</h2>
+            
             <label for="review">Your Review:</label>
-            <textarea id="review" name="review" required></textarea>
+            <textarea id="review" name="review" required placeholder="Share your experience about this place..."></textarea>
+            
             <label for="rating">Rating:</label>
             <select id="rating" name="rating" required>
-                <!-- Options for rating -->
+                <!-- Options will be populated by JavaScript -->
             </select>
+            
             <button type="submit">Submit Review</button>
         </form>
+        
+        <div id="message" class="message" style="display: none;"></div>
     </main>
+
+    <footer>
+        <p>&copy; 2025 All rights reserved</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
